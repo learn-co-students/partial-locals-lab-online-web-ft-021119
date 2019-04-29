@@ -1,7 +1,9 @@
+
+
 Classroom Info
 <%= render partial: "classroom", locals: {classroom: @classroom} %>
 
 
-<% Classroom.students.each do |student| %>
-  <%= render partial: "/students/student", locals: {student: @student} %>
+<% @classroom.students.map do |student| %>
+  <%= render partial: "/students/student", locals: {student: student} %>
 <% end %>
