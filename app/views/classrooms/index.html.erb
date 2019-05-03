@@ -1,0 +1,6 @@
+    
+All Classroom information
+
+<%= @classrooms.each do |one_class| %>
+  <%= render partial: "classroom", locals: {classroom: one_class} %>
+<% end %>
